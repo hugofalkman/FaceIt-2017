@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 class FaceView: UIView {
 
+    // Public API
+    
     @IBInspectable
     var scale: CGFloat = 0.9
     
@@ -26,6 +28,16 @@ class FaceView: UIView {
     @IBInspectable
     var mouthCurvature: Double = -0.5 // 1 full smile, -1 full frown
 
+    // Private Implementation
+    
+    private struct Ratios {
+        static let SkullRadiusToEyeOffset: CGFloat = 3
+        static let SkullRadiusToEyeRadius: CGFloat = 10
+        static let SkullRadiusToMouthWidth: CGFloat = 1
+        static let SkullRadiusToMouthHeight: CGFloat = 3
+        static let SkullRadiusToMouthOffset: CGFloat = 3
+    }
+    
     private var skullRadius: CGFloat {
         return min(bounds.size.width, bounds.size.height) / 2 * scale
     }
@@ -107,14 +119,6 @@ class FaceView: UIView {
         pathForEye(.left).stroke()
         pathForEye(.right).stroke()
         pathForMouth().stroke()
-    }
-    
-    private struct Ratios {
-        static let SkullRadiusToEyeOffset: CGFloat = 3
-        static let SkullRadiusToEyeRadius: CGFloat = 10
-        static let SkullRadiusToMouthWidth: CGFloat = 1
-        static let SkullRadiusToMouthHeight: CGFloat = 3
-        static let SkullRadiusToMouthOffset: CGFloat = 3
     }
 }
 

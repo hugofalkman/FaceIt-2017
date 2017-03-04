@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FaceViewController: UIViewController {
+class FaceViewController: VCLLoggingViewController {
     
     var expression = FacialExpression(eyes: .open, mouth: .neutral) {
         didSet {

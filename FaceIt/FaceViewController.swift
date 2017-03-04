@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FaceViewController.swift
 //  FaceIt
 //
 //  Created by H Hugo Falkman on 2017-02-23.
@@ -8,7 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FaceViewController: UIViewController {
+    
+    var expression = FacialExpression(eyes: .open, mouth: .neutral) {
+        didSet {
+            updateUI()
+        }
+    }
 
     @IBOutlet weak var faceView: FaceView! {
         didSet {
@@ -44,12 +50,6 @@ class ViewController: UIViewController {
         if tapRecognizer.state == .ended {
             let eyes: FacialExpression.Eyes = (expression.eyes == .closed) ? .open : .closed
             expression = FacialExpression(eyes: eyes, mouth: expression.mouth)
-        }
-    }
-    
-    var expression = FacialExpression(eyes: .open, mouth: .grin) {
-        didSet {
-            updateUI()
         }
     }
     

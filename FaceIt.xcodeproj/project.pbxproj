@@ -17,6 +17,7 @@
 		B191B0C01E5F4F430003A32B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B191B0BF1E5F4F430003A32B /* Assets.xcassets */; };
 		B191B0C31E5F4F430003A32B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B191B0C11E5F4F430003A32B /* LaunchScreen.storyboard */; };
 		B191B0CC1E5F51730003A32B /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B191B0CB1E5F51730003A32B /* FaceView.swift */; };
+		B1ACB9291E9EC89E00C9FD39 /* ExpressionEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ACB9281E9EC89E00C9FD39 /* ExpressionEditorViewController.swift */; };
 		B1FAC9521E97C25F0007296B /* BlinkingFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FAC9511E97C25F0007296B /* BlinkingFaceViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		B191B0C21E5F4F430003A32B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B191B0C41E5F4F430003A32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B191B0CB1E5F51730003A32B /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		B1ACB9281E9EC89E00C9FD39 /* ExpressionEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionEditorViewController.swift; sourceTree = "<group>"; };
 		B1FAC9511E97C25F0007296B /* BlinkingFaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkingFaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				B191B0BC1E5F4F430003A32B /* Main.storyboard */,
+				B1ACB9281E9EC89E00C9FD39 /* ExpressionEditorViewController.swift */,
 				B1FAC9511E97C25F0007296B /* BlinkingFaceViewController.swift */,
 				B180538C1E6B0799005FA83A /* EmotionsViewController.swift */,
 				B191B0BA1E5F4F430003A32B /* FaceViewController.swift */,
@@ -169,6 +172,7 @@
 				B180538D1E6B0799005FA83A /* EmotionsViewController.swift in Sources */,
 				B1FAC9521E97C25F0007296B /* BlinkingFaceViewController.swift in Sources */,
 				B191B0B91E5F4F430003A32B /* AppDelegate.swift in Sources */,
+				B1ACB9291E9EC89E00C9FD39 /* ExpressionEditorViewController.swift in Sources */,
 				B18371611E9A7D1700C4B3E6 /* EyeView.swift in Sources */,
 				B191B0CC1E5F51730003A32B /* FaceView.swift in Sources */,
 			);

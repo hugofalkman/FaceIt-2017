@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FaceViewController: VCLLoggingViewController {
+class FaceViewController: UIViewController {
     
     var expression = FacialExpression(eyes: .open, mouth: .neutral) {
         didSet {
@@ -53,12 +53,19 @@ class FaceViewController: VCLLoggingViewController {
         }
     }
     
-    private func updateUI() {
+    func updateUI() {
         switch expression.eyes {
         case .open:
             faceView?.eyesOpen = true
-        default:
+//        default:
+        case .closed:
             faceView?.eyesOpen = false
+        case .squinting:
+            // we used to make squinting be "eyes closed"
+            // but now we're going to do nothing in that case
+            // this allows a subclass to step in
+            //            faceView?.eyesOpen = false
+            break
         }
         
         faceView?.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
